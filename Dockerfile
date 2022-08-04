@@ -13,5 +13,5 @@ EXPOSE 5000
 RUN npm i                
 # baixa as dependencias do node dentro da imagem
 
-CMD ["node", "dist/index.js"]      
+CMD ["npm", "run", "dev:migrate"]      
 # roda isso quando o container estiver ativo

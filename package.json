@@ -2,11 +2,13 @@
   "name": "sorteio-feliz",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev": "nodemon index.ts"
+    "dev:migrate": "npx prisma migrate dev && npm run build && node dist/index.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
