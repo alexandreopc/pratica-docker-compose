@@ -10,8 +10,8 @@ COPY . .
 EXPOSE 5000              
 # expõe a porta 5000
 
-RUN npm i                
+RUN npm i && npm run build              
 # baixa as dependencias do node dentro da imagem
 
-CMD ["npm", "run", "dev:migrate"]      
+CMD ["npm", "start"]      
 # roda isso quando o container estiver ativo

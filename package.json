@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "tsc",
-    "dev:migrate": "npx prisma migrate dev && npm run build && node dist/index.js",
-    "dev": "nodemon index.js",
-    "start": "node index.js"
+    "prisma:migrate": "prisma migrate dev",
+    "start": "npm run prisma:migrate  && node dist/index.js",
+    "dev": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
